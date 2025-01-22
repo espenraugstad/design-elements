@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.tiny.cloud/1/3xpspp35yem5g132pioey20i83c89wlj1bso4ji5pga7s3h7/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>tinymce.init({
+        selector: '#question',
+        plugins: 'link',
+        toolbar: 'link'
+    });
+        tinymce.init({
+            selector: '#answer',
+            plugins: 'link',
+            toolbar: 'link'
+        })
+    </script>
     <title>DE</title>
     
 </head>
@@ -17,9 +29,17 @@
         <input type="text" name="question" id="question">
         <label for="answer">Answer:</label>
         <textarea name="answer" id="answer" rows="5"></textarea>
-        <button id="qnaGen">Generate</button>
+        <button id="qnaGen" class="btn">Generate</button>
     </div>
     <div id="qnaOutput"></div>
+
+    <dialog id="linkToAdd">
+        <div class="enterLink">
+            <label for="addedLink">Enter link</label>
+            <input type="text" name="" id="addedLink">
+            <button class="btn" id="addLinkBtn">Add link</button>
+        </div>
+    </dialog>
     <script src="./script/qnaGen.js"></script>
 </body>
 </html>
