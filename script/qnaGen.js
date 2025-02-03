@@ -37,6 +37,7 @@ function handleAddLink(){
 function generateHtml(){
     let questionContent = tinymce.get("question").getContent();
     let answerContent = tinymce.get("answer").getContent();
+    console.log(answerContent);
     qnaOutput.innerText = `<details class="border mt-3 mb-3" style="border-color:var(--sd-clriyhc9q000150hgi4cpn37r-pkhs);">
 	<summary class="border-b p-2" style="border-color:var(--sd-clriyhc9q000150hgi4cpn37r-pkhs);">
 		<div class="p-0 m-0 inline-block mce-content-body mce-edit-focus" style="position:relative;">${questionContent}</div>
